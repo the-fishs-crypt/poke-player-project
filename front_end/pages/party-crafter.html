@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="/front_end/index.js" onload="prty_maker()"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+      body {
+        background-image: url("/front_end/images/pokemon-chromebook-wallpaper.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">poke_player</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="/front_end/index.html">Home</a></li>
+          <li><a href="#">rank</a></li>
+          <li class="active"><a href="#">Party crafter</a></li>
+          <li><a href="/front_end/pages/battle.html">battle!</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="well">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <strong>Saved Partys</strong>
+              <a
+                role="button"
+                type="button"
+                class="btn btn-default"
+                data-toggle="tooltip"
+                title="Create A New Party!"
+                href="/front_end/pages/makeParty.html"
+              >
+                <b>+</b>
+              </a>
+            </div>
+            <div
+              id="partys"
+              class="panel-body"
+              data-spy="scroll"
+              data-target=".partys"
+              data-offset="50"
+            >
+              <br />
+              <div class="list-group">
+                <a href="#" class="list-group-item">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">name of party</div>
+                    <div class="panel-body">
+                      <img
+                        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+                        width="40"
+                        height="40"
+                      /><img
+                        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"
+                        width="40"
+                        height="40"
+                      /><img
+                        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png"
+                        width="40"
+                        height="40"
+                      /><img
+                        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"
+                        width="40"
+                        height="40"
+                      /><img
+                        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png"
+                        width="40"
+                        height="40"
+                      /><img
+                        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png"
+                        width="40"
+                        height="40"
+                      />
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="list-group-item">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">name of party</div>
+                    <div class="panel-body">
+                      <img
+                        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+                        width="40"
+                        height="40"
+                      /><img
+                        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"
+                        width="40"
+                        height="40"
+                      /><img
+                        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png"
+                        width="40"
+                        height="40"
+                      /><img
+                        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"
+                        width="40"
+                        height="40"
+                      /><img
+                        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png"
+                        width="40"
+                        height="40"
+                      /><img
+                        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png"
+                        width="40"
+                        height="40"
+                      />
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="list-group-item"
+                  ><div class="panel panel-default">
+                    <div class="panel-heading">name of party</div>
+                    <div class="panel-body">
+                      <img
+                        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+                        width="40"
+                        height="40"
+                      /><img
+                        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"
+                        width="40"
+                        height="40"
+                      /><img
+                        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png"
+                        width="40"
+                        height="40"
+                      /><img
+                        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"
+                        width="40"
+                        height="40"
+                      /><img
+                        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png"
+                        width="40"
+                        height="40"
+                      /><img
+                        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png"
+                        width="40"
+                        height="40"
+                      />
+                    </div></div
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="well">
+          <div class="container-fluid">
+            <div class="jumbotron text-center">
+              <div class="row">
+                <div class="col-lg-4">
+                  <a href="#">
+                    <img
+                      src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"
+                      width="100"
+                      height="100"
+                      class="mx-auto d-block"
+                    />
+                  </a>
+                </div>
+                <div class="col-lg-4">
+                  <img
+                    src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png"
+                    width="200"
+                    height="200"
+                    class="mx-auto d-block"
+                  />
+                </div>
+                <div class="col-lg-4">
+                  <a href="#">
+                    <img
+                      src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png"
+                      width="100"
+                      height="100"
+                      class="mx-auto d-block"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--tab bar-->
+          <ul class="nav nav-tabs">
+            <li class="" id="moves-tab">
+              <a id="moves-button">moves</a>
+            </li>
+            <li class="" id="stats-tab">
+              <a id="stats-button">stats</a>
+            </li>
+            <li class="" id="other-tab">
+              <a id="others-button">other</a>
+            </li>
+          </ul>
+          <!-- end of nav bar-->
+          <!-- beginning of moves tab-->
+          <div class="well" id="moves-page">
+            <div class="row">
+              <div class="col-lg-6">
+                <!--beginning of colum 1-->
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    thunder
+                    <!-- begginingtoggle button-->
+                    <a
+                      role="button"
+                      type="button"
+                      class="btn btn-default"
+                      data-target="#move1"
+                      data-toggle="collapse"
+                    >
+                      +
+                    </a>
+                    <!-- end toggle button     -->
+                  </div>
+                  <div class="panel-body" id="move1">
+                    <div class="row">
+                      <div class="col-lg-8">
+                        this hits the enemy with lightning
+                      </div>
+                      <div class="col-lg-4">
+                        <img src="/front_end/images/move-special.png" alt="" />
+                        <img
+                          src="/front_end/images/type-icons/electric.svg"
+                          style="width: 60px; height: 60px"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div></div>
+                </div>
+                <!-- end of colum 1-->
+              </div>
+              <div class="col-lg-6"></div>
+            </div>
+          </div>
+          <!--end of moves tab-->
+          <!-- beginning of stats page-->
+          <div class="well" id="stats-page">this is the stats page!</div>
+          <!--   end of stats page    -->
+          <!--begining of others page-->
+          <div class="well" id="other-page">this is the others page!</div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var active_tab_li = "#moves-tab";
+      const tabs = [
+        ["#moves-tab", "#moves-page", "#moves-button"],
+        ["#stats-tab", "#stats-page", "#stats-button"],
+        ["#other-tab", "#other-page", "#others-button"],
+      ];
+
+      /*====================================JQuery  code============================================*/
+      //---------------------------------initialization functions--------------------------------------------
+      //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~checks if logged in~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      $(document).ready(function () {
+        if (user_logged_in() == true) {
+        }
+      });
+
+      //~~~~~~~~~~~~~hover over button element and shows tool tips function~~~~~~~~~~~~~~~~~~
+      $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+
+      //~~~~~~~~~~~~~~~~~~~~~~~~~ inizilizes the tabs ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      $(document).ready(function () {
+        $(tabs[0][1]).show();
+        $(tabs[1][1]).hide();
+        $(tabs[2][1]).hide();
+        $(tabs[0][0]).addClass("active");
+        $(tabs[1][0]).removeClass("active");
+        $(tabs[2][0]).removeClass("active");
+      });
+      //====================================End of innit functions=======================================
+
+      //-----------------------------tabs functions--------------------
+      //---------------------------moves----------------------
+      $(document).ready(function () {
+        $(tabs[0][2]).click(function () {
+          $(tabs[0][1]).show();
+          $(tabs[1][1]).hide();
+          $(tabs[2][1]).hide();
+          $(tabs[0][0]).addClass("active");
+          $(tabs[1][0]).removeClass("active");
+          $(tabs[2][0]).removeClass("active");
+        });
+      });
+      //---------------------------stats-----------------------
+      $(document).ready(function () {
+        $(tabs[1][2]).click(function () {
+          $(tabs[0][1]).hide();
+          $(tabs[1][1]).show();
+          $(tabs[2][1]).hide();
+          $(tabs[0][0]).removeClass("active");
+          $(tabs[1][0]).addClass("active");
+          $(tabs[2][0]).removeClass("active");
+        });
+      });
+      //---------------------------others------------------------
+      $(document).ready(function () {
+        $(tabs[2][2]).click(function () {
+          $(tabs[0][1]).hide();
+          $(tabs[1][1]).hide();
+          $(tabs[2][1]).show();
+          $(tabs[0][0]).removeClass("active");
+          $(tabs[1][0]).removeClass("active");
+          //fix this bug here soon
+          $(tabs[2][0]).addClass("active");
+        });
+      });
+
+      //==================================end of tabs functions======================
+
+      /*====================================JavaScript function=====================================*/
+    </script>
+  </body>
+</html>

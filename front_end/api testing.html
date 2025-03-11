@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="/front_end/index.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+      body {
+        background-color: antiquewhite;
+      }
+    </style>
+  </head>
+  <body>
+    <br />
+    <div class="well">
+      <!--onclick="test_api('camilla kennedy','ilovesuger3000','b@gmail',{'1':'bulbasaur'},'grass','default')"-->
+      <button id="test-api-btn">bleep bloop {testing:post requests}</button>
+    </div>
+    <br />
+
+    <div class="well">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          click this in order to make the api call for the partys --'>'
+          <button class="btn-default" id="get-request-party-btn">
+            <strong>{+}</strong>
+          </button>
+        </div>
+        <div class="panel-body" id="party-panel-body"></div>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        $("#get-request-party-btn").click(function () {
+          var party = $.create(
+            get_pokemon_partys("partys", "trainer_data", "id", "1")
+          );
+          $("#party-panel-body").append(party);
+        });
+      });
+
+      $(document).ready(function () {
+        $("#test-api-btn").click(function () {
+          test_api(
+            "camilla kennedy",
+            "ilovesuger3000",
+            "b@gmail",
+            '{"party_1":[{"name":"bulbasaur","sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"}]}',
+            "grass",
+            "default"
+          );
+        });
+      });
+    </script>
+
+    <!--div class="well">
+      <form action="/action_page.php">
+        <div class="form-group">
+          <label for="email">Email address:</label>
+          <input type="email" class="form-control" id="email" />
+        </div>
+        <div class="form-group">
+          <label for="pwd">Password:</label>
+          <input type="password" class="form-control" id="pwd" />
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" /> Remember me</label>
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div -->
+  </body>
+</html>

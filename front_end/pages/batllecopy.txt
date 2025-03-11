@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: rgba(0, 255, 183, 0.954);
+      }
+      .sprite {
+        position: relative;
+        offset: 20%;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3/dist/phaser.min.js"></script>
+  </head>
+  <body>
+    <img src="" alt="" id="opponent_pokemon" class="sprite" class="enemy" />
+    <br />
+    <img src="" alt="" id="user_pokemon" class="sprite" class="player" />
+
+    <script src="/front_end/index.js" onload="manage_battle()"></script>
+  </body>
+</html>
+<!- width: 25%;
+height: 25%;->
